@@ -4,7 +4,7 @@ export default class ShowMenItems extends React.Component {
   render() {
     return (
       <div>
-        <h1>ShowMenItems</h1>
+        <h1>Men</h1>
       </div>
     );
   }

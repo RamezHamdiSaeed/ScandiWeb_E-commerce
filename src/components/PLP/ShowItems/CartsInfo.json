@@ -1,0 +1,85 @@
+{
+   "Nike" :{
+       "sweatPants":{   
+        "category":"Men",
+        "image" : "https://images.pexels.com/photos/1601/fashion-",
+        "price" : "100",
+        "sizes" : ["L","XL"],
+        "colors" : ["red","blue","green","yellow"],
+        "description" : "this is a sweatpants",
+        "quantity" : "1"
+    },
+   "T-shirt" :{
+        "category":"Women",
+        "image" : "https://images.pexels.com/photos/1601/fashion-",
+        "price" : "100",
+        "sizes" : ["M","L","XL"],
+        "colors" : ["red","blue","green","yellow"],
+        "description" : "this is a T-shirt",
+        "quantity" : "1"
+    },
+    "Shoes" :{
+        "category":"Kids",
+        "image" : "https://images.pexels.com/photos/1601/fashion-",
+        "price" : "100",
+        "sizes" : ["S","M"],
+        "colors" : ["red","blue","green","yellow"],
+        "description" : "this is a shoes",
+        "quantity" : "1"
+    }
+
+    },
+    "Adidas":{
+        "sweatPants":{   
+            "category":"Men",
+            "image" : "https://images.pexels.com/photos/1601/fashion-",
+            "price" : "100",
+            "sizes" : ["L","XL"],
+            "colors" : ["red","blue","green","yellow"],
+            "description" : "this is a sweatpants",
+            "quantity" : "1"
+        },
+       "T-shirt" :{
+            "category":"Kids",
+            "image" : "https://images.pexels.com/photos/1601/fashion-",
+            "price" : "100",
+            "sizes" : ["S","M"],
+            "colors" : ["red","blue","green","yellow"],
+            "description" : "this is a T-shirt",
+            "quantity" : "1"
+        },
+        "Shoes" :{
+            "category":"Women",
+            "image" : "https://images.pexels.com/photos/1601/fashion-",
+            "price" : "100",
+            "sizes" : ["M","L","XL"],
+            "colors" : ["red","blue","green","yellow"],
+            "description" : "this is a shoes",
+            "quantity" : "1"
+        }
+
+        
+    }
+    ,"saudi":{
+        "T-shirt" :{
+            "category":"Kids",
+            "image" : "https://images.pexels.com/photos/1601/fashion-",
+            "price" : "100",
+            "sizes" : ["S","M"],
+            "colors" : ["red","blue","green","yellow"],
+            "description" : "this is a T-shirt",
+            "quantity" : "1"
+        },
+        "Shoes" :{
+            "category":"Women",
+            "image" : "https://images.pexels.com/photos/1601/fashion-",
+            "price" : "100",
+            "sizes" : ["M","L","XL"],
+            "colors" : ["red","blue","green","yellow"],
+            "description" : "this is a shoes",
+            "quantity" : "1"
+        }
+       
+    }
+
+}

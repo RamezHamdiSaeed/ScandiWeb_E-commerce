@@ -11,7 +11,7 @@ import ShowKidsItems from '../PLP/ShowKidsItems/ShowKidsItems';
 export default class App extends Component {
   render() {
     return (
-    <BrowserRouter>
+      <div> <BrowserRouter>
       <Routes>
         <Route  path="/" element={<BaseNavBar />}>
           <Route index element={<ShowItems />} />
@@ -22,7 +22,8 @@ export default class App extends Component {
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter></div>
+   
   ); 
     
   }
