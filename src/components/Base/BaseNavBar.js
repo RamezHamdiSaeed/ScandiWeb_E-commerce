@@ -3,7 +3,7 @@ import {Link,Outlet} from "react-router-dom";
 import"./BaseNavBar.css";
 import DropDownButton from "../DropDownButton/DropDownButton";
 import navLogo from "./navLogo.png";
-import DropDownBasket from "../DropDownBasket/DropDownBasket"; 
+import DropDownBasket from "../DropDownBasket/DropDownBasket";
 
 export default class BaseNavBar extends Component{ 
 render(){
@@ -16,7 +16,7 @@ render(){
             <li><Link to="/ShowKidsItems" className="Link">Kids</Link></li>
             <li id="#rightAbout" style={Object.assign({},storeAndminiCart,{marginTop:"15px"})}><DropDownBasket/></li>
             <li style={storeAndminiCart}><DropDownButton/></li>
-            <li style={{position:"fixed",right:"48vw"}}><Link to="/" className="Link"><img src={navLogo} alt="companyLogo" style={{width:"30px",height:"30px"}}></img></Link></li>
+            <li style={{position:"absolute",right:"48vw"}}><Link to="/" ><img id="linkableLogo" src={navLogo} alt="companyLogo" style={{width:"30px",height:"30px"}}></img></Link></li>
           </ul></nav>
          
           <Outlet />
