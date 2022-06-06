@@ -1,24 +1,27 @@
 import React from "react";
 import "./ShowItems.css";
+import Pagination from "../Pagination/Pagination";
 import Carts from "../../../backEnd/CartsInfo.js";
-import Cart from "../../Cart/Cart.js";
-const items = new Carts().showItems();
 export default class ShowItems extends React.Component {
-
-fetchItems(){
-   let carts=[];
-   items.forEach(element => {
-       
-                 carts.push(<Cart image={element.image} company={element.company} name={element.name} price={element.price}/>);
-                })
-           return carts; }
+    constructor(){
+        super();
+        //* we need to change this jsx element state  by its pagination state
+        this.state={currentPage:1};
+        this.update=this.update.bind(this);
+    }
+    update(nexState){
+        this.setState(nexState);
+    }
     render() {
+        const carts =new Carts().showItems();
+        const activeCarts = carts.slice((this.state.currentPage-1)*6,this.state.currentPage*6);
         return(<div style={{marginLeft:"-15px"}}>
             <h1 style={{marginLeft:"30px"}}>All Items</h1>
             <div id="gridForCarts">
 
-                {this.fetchItems().map(item => item)}
+                {activeCarts.map(item => item)}
             </div>
+            <Pagination carts={carts} currentPage={this.state.currentPage} updateCurrentPage={this.update}/>
         </div>) 
         
                
