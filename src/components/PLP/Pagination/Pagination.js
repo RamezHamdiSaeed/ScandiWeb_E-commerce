@@ -34,7 +34,7 @@ export default class Pagination extends React.Component {
     }
   
     render(){
-        return(<div class="pagination">
+        return(<div className="pagination">
                     {this.props.currentPage!==1 && <button onClick={this.goPrevPage}>&laquo;</button>} 
                     {this.getPaginationButtons()}
                     {this.props.currentPage < this.noOfPages && <button onClick={this.goNextPage} >&raquo;</button>}

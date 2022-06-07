@@ -17,4 +17,15 @@ export default class Carts extends React.Component{
   return  this.carts;
  ;
 }
+  showReducedItems(property,value) {
+   this.cartsInfo.forEach(element => {
+     if (element[property]===value)
+                 {
+                   this.carts.push(<Cart image={element.image} company={element.company} name={element.name} price={element.price}/>);
+                  }
+
+                })
+  return  this.carts;
+ ;
+}
 }
