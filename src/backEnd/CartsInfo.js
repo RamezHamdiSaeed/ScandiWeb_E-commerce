@@ -1,6 +1,6 @@
 import React from "react";
 import CardsInfo from "./CardsInfo.json";
-import Cart from "../components/Cart/Cart";
+import Cart from "../components/Cart/Cart.tsx";
 
 export default class Carts extends React.Component{
   constructor() {

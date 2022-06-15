@@ -8,7 +8,7 @@ import ShowMenItems from '../PLP/ShowMenItems/ShowMenItems';
 import CashOut from '../CashOut/CashOut';
 import NoPage from '../NoPage/NoPage';
 import ShowKidsItems from '../PLP/ShowKidsItems/ShowKidsItems';
-import Pdp from '../PDP/Pdp';
+import Pdp from '../PDP/Pdp.tsx';
 export default class App extends Component {
   render() {
     return (
