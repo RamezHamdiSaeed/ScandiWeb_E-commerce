@@ -3,7 +3,7 @@ import "./Cart.css";
 import { Link } from "react-router-dom";
 // to use the redux for class components we need to use the connect function
 import {connect} from "react-redux";
-import {addItem} from "../../Features/Basket/basketSlice";
+import {addItem,removeFromCart} from "../../Features/Basket/basketSlice";
 import { State } from "../../Store";
 
 let cartTextStyle={color: "#1D1F22",textDecoration:"underline",textDecorationColor:"white"}
@@ -11,16 +11,20 @@ let cartTextStyle={color: "#1D1F22",textDecoration:"underline",textDecorationCol
 interface CartsProps {
   addItem:(item:any)=>void;
   image: string;
-  name: string;
-  price: number;
   company:string;
+  name: string;
+  sizes:string[];
+  colors:string[];
+  price: number;
+  
+
 }
 export  class Cart extends React.Component<CartsProps> {
    
     render() {
-      let {image, name, price, company ,addItem} = this.props;
+      let {image, name, price, company, sizes, colors ,addItem} = this.props;
         return (
-            <Link to="/pdp" onClick={()=>{addItem({image:image,company:company,name:name,price:price})}}><div className="card">{
+            <Link to="/pdp" onClick={()=>{addItem({image:image,company:company,name:name, sizes:sizes, colors:colors ,price:price})}}><div className="card">{
             }
   <img src={image} alt="product" style={{width:"100%",height:"80%"}}/>
   <div className="container">
@@ -38,4 +42,4 @@ const mapStateToProps = (state:State) => ({
 });
 
 
-export default connect(mapStateToProps, { addItem })(Cart);
+export default connect(mapStateToProps, { addItem ,removeFromCart})(Cart);

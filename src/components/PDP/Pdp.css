@@ -1,0 +1,60 @@
+#container{
+    display: grid;
+    grid-template-columns: auto 610px 292px;
+    grid-gap: 10px;
+    grid-template-areas: "sideImage1 selectedImage form",
+                         "sideImage2 selectedImage form",
+                         "sideImage3 selectedImage form";
+    margin: 20px 40px 0px 0px;
+    justify-items: left;
+    font-family: Rel;
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 27px;
+}   
+#container .sideImage {
+    width:96.88px ;
+    height: auto;
+}
+#sideImage1{
+    grid-area: "sideImage1" ;
+    
+   
+}
+#selectedImage{
+    height: 50%;
+    width:100%;
+    grid-area: "selectedImage" ;
+    position: relative;
+    right: 50px;
+    margin-left: -30%;
+    
+   
+}
+#form{
+    grid-area: "form" ;
+    margin-left: -50%; 
+   
+}
+
+#addToCart{
+  background-color: #5ECE7B;
+  width:292px;
+  height:52px;
+  margin-top: 20px;
+}
+.sizeButtonClicked{
+  background-color:black;
+    color:white;
+}
+.sizeButtonDefault{
+  background-color:white;
+  color: black;
+}
+.colorButtonClicked{
+border: 0.5px solid #5ECE7B;
+}
+.colorButtonDefault{
+border: none; 
+}
