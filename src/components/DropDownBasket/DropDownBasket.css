@@ -70,4 +70,5 @@ background: #5ECE7B;
 }
 #link {
   display: inline;
+  text-decoration: none;
 }

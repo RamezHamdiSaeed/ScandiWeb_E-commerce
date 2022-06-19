@@ -1,10 +1,8 @@
-import React from "react";
 import CardsInfo from "./CardsInfo.json";
 import Cart from "../components/Cart/Cart.tsx";
 
-export default class Carts extends React.Component{
+export default class Carts{
   constructor() {
-    super();
     this.cartsInfo = CardsInfo;
     this.carts=[];
   }
@@ -12,7 +10,7 @@ export default class Carts extends React.Component{
   showItems() {
    this.cartsInfo.forEach(element => {
        
-                 this.carts.push(<Cart image={element.image} company={element.company} name={element.name} sizes={element.sizes} colors={element.colors} price={element.price} />);
+                 this.carts.push(<Cart image={element.image} company={element.company} name={element.name} sizes={element.sizes} colors={element.colors} price={element.price} description={element.description} quantity={element.quantity}/>);
                 })
   return  this.carts;
  ;
@@ -22,7 +20,7 @@ export default class Carts extends React.Component{
    this.cartsInfo.forEach(element => {
      if (element[property]===value)
                  {
-                   this.carts.push(<Cart image={element.image} company={element.company} name={element.name} sizes={element.sizes} colors={element.colors} price={element.price}/>);
+                   this.carts.push(<Cart image={element.image} company={element.company} name={element.name} sizes={element.sizes} colors={element.colors} price={element.price} description={element.description} quantity={element.quantity}/>);
                   }
 
                 })

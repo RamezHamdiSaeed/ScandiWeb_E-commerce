@@ -1,7 +1,7 @@
 #container{
     display: grid;
     grid-template-columns: auto 610px 292px;
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-areas: "sideImage1 selectedImage form",
                          "sideImage2 selectedImage form",
                          "sideImage3 selectedImage form";
@@ -35,9 +35,26 @@
 #form{
     grid-area: "form" ;
     margin-left: -50%; 
+    margin-top: -13%;
    
 }
+#description {
+  width: 292px;
+height: 103px;  
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 159.96%;
+/* or 26px */
 
+
+/* --c-text */
+
+color: #1D1F22;
+
+}
+            
 #addToCart{
   background-color: #5ECE7B;
   width:292px;

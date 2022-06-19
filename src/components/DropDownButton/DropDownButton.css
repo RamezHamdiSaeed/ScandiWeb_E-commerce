@@ -24,7 +24,7 @@
   }
   
   /* Links inside the dropdown */
-  .dropdown-content a {
+  .dropdown-content button {
     color: black;
     padding: 12px 10px;
     text-decoration: none;
@@ -32,7 +32,7 @@
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color:white}
+  .dropdown-content button:hover {background-color:white}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {

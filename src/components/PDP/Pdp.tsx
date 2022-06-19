@@ -1,21 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import {addToCart, removeFromCart} from "../../Features/Basket/basketSlice";
+import {addItem} from "../../Features/Basket/basketSlice";
 import { State } from "../../Store";
 import "./Pdp.css";
 
 interface PdpProps {
-  addToCart:(item:any)=>void;
-  removeFromCart:()=>void;
-  noOfItems:number;
-  items: any;
+  addItem:(item:any)=>void;
+  currentItem:{image:string,company:string,name:string, sizes:string[], colors:string[], price:number,description:string};
   image: string;
   name: string;
   company:string;
   sizes:string[];
   colors:string[];
   price: number;
+  description: string;
  
 }
 export class Pdp extends React.Component<PdpProps>{
@@ -41,10 +40,8 @@ export class Pdp extends React.Component<PdpProps>{
     console.log(`${this.state}from the buttonClick function`);
 }
   render() {
-    const {items, noOfItems, addToCart, removeFromCart} = this.props;
-    //! we need to check if the item is already in the cart by the user clicking on the add to cart button
-    if((items.length>noOfItems-1)&&(items.length-noOfItems>1)){removeFromCart()}
-    let {image, company,name ,sizes ,colors, price}=items[items.length-1];
+    let {image, company,name ,sizes ,colors, price, description}=this.props.currentItem;
+    console.log(image);
     //change the font color and the background color of the button when clicked and set the other size buttons to the default
     
    
@@ -66,8 +63,8 @@ height:"45px",backgroundColor:color}}></button>)}
         <h3>Price:</h3>
         <p style={{fontWeight:"700",
 fontSize:"24px"}}>${price}</p>
-        <Link to={"/"}><button id="addToCart"  onClick={()=>{addToCart(this.state);console.log(this.state)}}>add To Cart</button></Link>
-        <p></p>
+        <Link to={"/"}><button id="addToCart"  onClick={()=>{this.props.addItem(this.state);}}>add To Cart</button></Link>
+        <p id="description">{description}</p>
         </div>
       </div>
     );
@@ -75,9 +72,9 @@ fontSize:"24px"}}>${price}</p>
 }
 
 const mapStateToProps = (state:State) => ({
+  currentItem: state.basket.currentItem,
   items: state.basket.items,
-  noOfItems:state.basket.noOfItemsInBasket
 });
 
 
-export default connect(mapStateToProps, {addToCart, removeFromCart})(Pdp);
+export default connect(mapStateToProps, {addItem})(Pdp);

@@ -2,6 +2,7 @@ import React from "react";
 import'./DropDownBasket.css';
 import basket from './Vector.jpg';
 import { Link } from "react-router-dom";
+import QuantifiedCart from "../Cart/QuantifiedCart.tsx";
 export default class DropDownBasket extends React.Component {
   constructor(props) {
     super(props);
@@ -19,16 +20,10 @@ export default class DropDownBasket extends React.Component {
     <div className="dropdown">
   <img src={basket} alt="basketLogo"></img>
   <div className="dropdown-content">
-        <div>
-            <h3>this is first item</h3>
-        </div>
-
-        <div>
-            <h3>this is second item</h3>
-        </div>
+        <QuantifiedCart iterations={2}/>
       <div className="viewBagCheckOut">
-        <button id="viewBag">View Bag</button>
-        <Link to="/CashOut" id="link"><button id="checkOut" >Check Out</button></Link>
+        <Link to="/CashOut" id="link"><button id="viewBag">View Bag</button></Link>
+        <button id="checkOut" >Check Out</button>
       </div>
         
   </div>

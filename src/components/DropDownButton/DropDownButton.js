@@ -1,6 +1,9 @@
 import React from "react";
+import {connect} from "react-redux";
+import {changeCurrency} from "../../Features/Basket/basketSlice";
 import'./DropDownButton.css';
-export default class DropDownButton extends React.Component {
+
+export class DropDownButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,10 +20,17 @@ export default class DropDownButton extends React.Component {
     <div className="dropdown">
   <button className="dropbtn">$ <sub>^</sub></button>
   <div className="dropdown-content" style={{width:"auto",marginRight:"50px"}}>
-    <a href="#" style={{border:"none"}}>$ USD</a>
-    <a href="#" style={{border:"none"}}>€ EUR</a>
-    <a href="#" style={{border:"none"}}>¥ JPY</a>
+    <button onClick={()=>this.props.changeCurrency("$")} style={{border:"none"}}>$ USD</button>
+    <button onClick={()=>this.props.changeCurrency("€")} style={{border:"none"}}>€ EUR</button>
+    <button onClick={()=>this.props.changeCurrency("¥")} style={{border:"none"}}>¥ JPY</button>
   </div> </div>
     );
   }
   }
+const mapStateToProps = (state) => ({
+  currentItem: state.basket.currentItem,
+  items: state.basket.items,
+});
+
+
+export default connect(mapStateToProps, {changeCurrency})(DropDownButton);

@@ -31,7 +31,7 @@
         "price" : "100",
         "sizes" : ["S","M"],
         "colors" : ["red","blue","green","yellow"],
-        "description" : "this is a shoes",
+        "description" : "this is a jacket",
         "quantity" : "1"
     }
 
@@ -82,7 +82,7 @@
             "price" : "100",
             "sizes" : ["S","M"],
             "colors" : ["red","blue","green","yellow"],
-            "description" : "this is a T-shirt",
+            "description" : "this is a sweatpants",
             "quantity" : "1"
         },
        {
@@ -93,7 +93,7 @@
             "price" : "100",
             "sizes" : ["M","L","XL"],
             "colors" : ["red","blue","green","yellow"],
-            "description" : "this is a shoes",
+            "description" : "this is a T-shirt",
             "quantity" : "1"
         }
        
